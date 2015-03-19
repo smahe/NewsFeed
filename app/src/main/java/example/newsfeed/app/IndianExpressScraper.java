@@ -19,20 +19,19 @@ public class IndianExpressScraper extends Scraper {
     @Override
     public void getPage() {
         Request request = new Request.Builder().url("http://indianexpress.com/").build();
-        Response response = client.request(request);
+        Response response = this.client.request(request);
         try {
             InputStreamReader isr = new InputStreamReader(response.body().byteStream());
             BufferedReader reader = new BufferedReader(isr);
-            String input;
-            while((input = reader.readLine())!= null){
+            String input1 = "",input;
+            while((input = reader.readLine())!= null) {
+                //   input1.concat(input);
                 Log.d("CONTENT ", input);
             }
         } catch (IOException e) {
-            Log.d("EX","exception in getpage");
+            Log.d("EXCEPTION","Exception in getpage");
             e.printStackTrace();
         }
-
     }
-
 }
 

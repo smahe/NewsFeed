@@ -1,0 +1,10 @@
+var applyRules = function(){
+    var csElement = document.querySelector('.first-story h1');
+    var firstStoryHeadText = csElement.textContent;
+    //var secondHead = document.querySelector('.other-article h3').textContent;
+    var otherArticles = document.querySelectorAll('.other-article');
+    var s;
+    for(var i = 0;i<otherArticles.length;i++){
+         s = s + otherArticles[i].textContent
+    }
+}

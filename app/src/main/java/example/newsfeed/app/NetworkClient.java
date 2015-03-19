@@ -4,7 +4,6 @@ import android.util.Log;
 import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.Request;
 import com.squareup.okhttp.Response;
-
 import java.io.IOException;
 
 public class NetworkClient {
@@ -15,8 +14,10 @@ public class NetworkClient {
     }
 
     public static NetworkClient getClient(){
-        if(nwclient == null )
+        if(nwclient == null ){
             nwclient = new NetworkClient();
+            Log.d("NW","NW CREATED");
+        }
         return nwclient;
     }
 

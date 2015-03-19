@@ -1,11 +1,13 @@
 package example.newsfeed.app;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -23,7 +25,7 @@ public class MainActivity extends ActionBarActivity {
                     sc.getPage();
 
                 } catch (Exception e) {
-                    Log.d("EX", "exception in doinbackground");
+                    Log.d("EXCEPTION", "EXCEPTION IN DO IN BACKGROUND");
                     e.printStackTrace();
                 }
                 return null;
@@ -32,8 +34,6 @@ public class MainActivity extends ActionBarActivity {
             @Override
             protected void onPostExecute(String result) {
                 super.onPostExecute(result);
-                Log.d("ANSWER", "");
-
             }
         }.execute();
 
@@ -61,4 +61,5 @@ public class MainActivity extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
 }
